@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   entrar(login) {
     if (login.email === 'email' && login.senha === '12345') {
       this.autenticado = true;
-      this.router.navigate(['/dashboard']);
       localStorage.setItem('tokenLte', '12345');
+      window.location.href = '/dashboard';
     } else {
       localStorage.removeItem('tokenLte');
       this.autenticado = false;

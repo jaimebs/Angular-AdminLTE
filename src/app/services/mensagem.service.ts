@@ -7,12 +7,6 @@ import Swal from 'sweetalert2';
 export class MensagemService {
   constructor() {}
 
-  public tipoMensagem = {
-    aviso: 'aviso',
-    alerta: 'alerta',
-    error: 'error'
-  };
-
   aviso(titulo: string, texto: string, tipo: any) {
     Swal.fire({
       type: tipo,

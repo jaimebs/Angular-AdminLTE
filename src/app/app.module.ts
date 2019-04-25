@@ -13,6 +13,7 @@ import { HomeComponent } from './components/common/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RoutingModule } from './routes/routing.module';
 import { Interceptor } from './auth/interceptor.module';
+import { UsuarioComponent } from './components/_seguranca/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Interceptor } from './auth/interceptor.module';
     SidebarComponent,
     DashboardComponent,
     FiltroPipe,
-    HomeComponent
+    HomeComponent,
+    UsuarioComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, RoutingModule, Interceptor],
   providers: [],

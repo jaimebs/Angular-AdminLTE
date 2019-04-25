@@ -1,3 +1,4 @@
+import { UsuarioComponent } from './../components/_seguranca/usuario/usuario.component';
 import { HomeComponent } from './../components/common/home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,7 +16,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    children: [{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }]
+    children: [
+      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+      { path: 'usuario', component: UsuarioComponent, canActivate: [AuthGuard] }
+    ]
   }
 ];
 

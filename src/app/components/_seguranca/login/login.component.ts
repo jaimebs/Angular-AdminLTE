@@ -1,25 +1,18 @@
+import { Login } from './../../../models/login.models';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private loginService: LoginService) {}
 
-  login = {};
-  autenticado: boolean = true;
+  login = new Login();
 
-  entrar(login) {
-    if (login.email === 'email' && login.senha === '12345') {
-      this.autenticado = true;
-      localStorage.setItem('tokenLte', '12345');
-      window.location.href = '/dashboard';
-    } else {
-      localStorage.removeItem('tokenLte');
-      this.autenticado = false;
-    }
+  entrar(login: Login) {
+    this.loginService.logar(login);
   }
 
   ngOnInit() {}

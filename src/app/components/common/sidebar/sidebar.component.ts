@@ -5,10 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sidebar.component.html'
 })
 export class SidebarComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  usuario: string = '';
 
   ngOnInit() {
+    this.usuario = localStorage.getItem('usuario');
   }
-
 }

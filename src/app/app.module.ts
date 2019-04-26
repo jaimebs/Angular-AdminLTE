@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RoutingModule } from './routes/routing.module';
 import { Interceptor } from './auth/interceptor.module';
 import { UsuarioComponent } from './components/_seguranca/usuario/usuario.component';
+import { NotFoundComponent } from './components/common/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UsuarioComponent } from './components/_seguranca/usuario/usuario.compon
     DashboardComponent,
     FiltroPipe,
     HomeComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    NotFoundComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, RoutingModule, Interceptor],
   providers: [],

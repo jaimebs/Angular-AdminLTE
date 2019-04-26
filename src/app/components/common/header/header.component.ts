@@ -1,17 +1,20 @@
+import { LoginService } from './../../../services/login.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private loginService: LoginService) {}
+
+  usuario: string = '';
 
   logout() {
-    localStorage.removeItem('tokenLte');
-    this.router.navigate(['/login']);
+    this.loginService.logout();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.usuario = localStorage.getItem('usuario');
+  }
 }

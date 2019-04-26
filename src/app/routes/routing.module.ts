@@ -1,26 +1,25 @@
-import { UsuarioComponent } from './../components/_seguranca/usuario/usuario.component';
-import { HomeComponent } from './../components/common/home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from '../components/_administrativo/dashboard/dashboard.component';
 import { LoginComponent } from '../components/_seguranca/login/login.component';
 import { AuthGuard } from '../auth/auth.guard';
+import { UsuarioComponent } from './../components/_seguranca/usuario/usuario.component';
+import { HomeComponent } from './../components/common/home/home.component';
+import { DashboardComponent } from '../components/_administrativo/dashboard/dashboard.component';
+import { NotFoundComponent } from '../components/common/not-found/not-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent,
-    children: [{ path: '', redirectTo: 'login', pathMatch: 'full' }, { path: 'login', component: LoginComponent }]
-  },
-  {
-    path: '',
     component: HomeComponent,
     children: [
+      { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'usuario', component: UsuarioComponent, canActivate: [AuthGuard] }
     ]
-  }
+  },
+  { path: 'login', component: LoginComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

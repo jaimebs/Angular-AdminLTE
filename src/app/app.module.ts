@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/_seguranca/login/login.component';
@@ -29,7 +30,7 @@ import { NotFoundComponent } from './components/common/not-found/not-found.compo
     UsuarioComponent,
     NotFoundComponent
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, RoutingModule, Interceptor],
+  imports: [BrowserModule, FormsModule, HttpClientModule, RoutingModule, Interceptor, MaterialModule],
   providers: [],
   bootstrap: [AppComponent]
 })

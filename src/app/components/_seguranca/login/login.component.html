@@ -9,24 +9,16 @@
   <div class="login-box-body">
     <p class="login-box-msg text-uppercase">Entre com suas credenciais</p>
     <form #formLogin="ngForm">
-      <div class="form-group has-feedback">
-        <input type="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="login.email" required />
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input
-          type="password"
-          name="senha"
-          class="form-control"
-          placeholder="Senha"
-          [(ngModel)]="login.password"
-          required
-        />
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
+      <mat-form-field style="width: 100%">
+        <input matInput type="text" name="email" placeholder="Email" [(ngModel)]="login.email" required />
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%">
+        <input matInput type="password" name="password" placeholder="Senha" [(ngModel)]="login.password" required />
+      </mat-form-field>
       <div class="row">
         <div class="col-xs-4">
-          <button class="btn btn-primary btn-block btn-flat" (click)="entrar(login)" [disabled]="!formLogin.form.valid">
+          <button mat-raised-button color="primary" (click)="entrar(login)" [disabled]="!formLogin.form.valid">
             Entrar
           </button>
         </div>

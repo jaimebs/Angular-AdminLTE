@@ -11,7 +11,7 @@ export class LoginService {
   constructor(private router: Router, private http: HttpClient) {}
 
   logar(login: Login) {
-    return this.http.post(`${environment.API_URL}/usuarios/logar`, login);
+    return this.http.post(`${environment.API_URL}/seguranca/usuarios/logar`, login);
   }
 
   logout() {

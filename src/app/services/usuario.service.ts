@@ -8,6 +8,6 @@ import { environment } from 'src/environments/environment';
 })
 export class UsuarioService extends GenericoRestService<any> {
   constructor(public http: HttpClient) {
-    super(http, `${environment.API_URL}/usuarios`);
+    super(http, `${environment.API_URL}/seguranca/usuarios`);
   }
 }

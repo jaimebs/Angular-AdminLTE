@@ -7,6 +7,7 @@ import { UsuarioComponent } from './../components/_seguranca/usuario/usuario.com
 import { HomeComponent } from './../components/common/home/home.component';
 import { DashboardComponent } from '../components/_administrativo/dashboard/dashboard.component';
 import { NotFoundComponent } from '../components/common/not-found/not-found.component';
+import { UsuarioFormComponent } from '../components/_seguranca/usuario/usuario-form.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-      { path: 'seguranca/usuario', component: UsuarioComponent, canActivate: [AuthGuard] }
+      { path: 'seguranca/usuario', component: UsuarioComponent, canActivate: [AuthGuard] },
+      { path: 'seguranca/usuario/form', component: UsuarioFormComponent, canActivate: [AuthGuard] }
     ]
   },
   { path: 'login', component: LoginComponent },

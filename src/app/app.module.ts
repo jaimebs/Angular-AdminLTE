@@ -16,6 +16,7 @@ import { RoutingModule } from './routes/routing.module';
 import { Interceptor } from './auth/interceptor.module';
 import { UsuarioComponent } from './components/_seguranca/usuario/usuario.component';
 import { NotFoundComponent } from './components/common/not-found/not-found.component';
+import { UsuarioFormComponent } from './components/_seguranca/usuario/usuario-form.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NotFoundComponent } from './components/common/not-found/not-found.compo
     FiltroPipe,
     HomeComponent,
     UsuarioComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UsuarioFormComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, RoutingModule, Interceptor, MaterialModule],
   providers: [],

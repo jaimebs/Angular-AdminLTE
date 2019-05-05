@@ -1,29 +1,29 @@
-<section class="content-header">
+<section>
   <h1>
     Usuário
     <small>Listagem</small>
   </h1>
   <ol class="breadcrumb">
     <li>
-      <a href="#"> <i class="fa fa-dashboard"></i> Home</a>
+      <a [routerLink]="['/dashboard']"><i class="fa fa-dashboard"></i> Home</a>
     </li>
     <li class="active">Lista</li>
   </ol>
 </section>
-<br />
-<div>
+
+<div class="text-right">
   <button
+    class="text-right"
     mat-raised-button
     color="primary"
     matTooltip="Click para criar um novo usuário"
-    matTooltipPosition="right"
+    matTooltipPosition="left"
     matTooltipShowDelay="1000"
     [routerLink]="['/seguranca/usuario/form']"
   >
     Novo
   </button>
 </div>
-<br />
 
 <mat-form-field>
   <input matInput (keyup)="aplicarFiltro($event.target.value)" placeholder="Filtro" />

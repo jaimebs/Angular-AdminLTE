@@ -29,12 +29,12 @@ export class MensagemService {
   deletar(callback: () => void) {
     Swal.fire({
       title: 'Alerta!',
-      text: 'Deseja realmente deletar esse registro?',
+      text: 'Deseja realmente excluir esse registro?',
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Sim, deletar!',
+      confirmButtonText: 'Sim, excluir!',
       cancelButtonText: 'Não, cancelar!',
       reverseButtons: true
     }).then(result => {

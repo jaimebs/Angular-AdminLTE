@@ -12,7 +12,14 @@
 </section>
 <br />
 <div>
-  <button mat-raised-button color="primary" [routerLink]="['/seguranca/usuario/form']">
+  <button
+    mat-raised-button
+    color="primary"
+    matTooltip="Click para criar um novo usuário"
+    matTooltipPosition="right"
+    matTooltipShowDelay="1000"
+    [routerLink]="['/seguranca/usuario/form']"
+  >
     Novo
   </button>
 </div>
@@ -40,7 +47,9 @@
     <ng-container matColumnDef="editar">
       <th mat-header-cell *matHeaderCellDef>Editar</th>
       <td mat-cell *matCellDef="let row">
-        <button mat-raised-button><mat-icon>edit</mat-icon></button>
+        <button mat-raised-button>
+          <mat-icon>edit</mat-icon>
+        </button>
       </td>
     </ng-container>
 
@@ -48,7 +57,9 @@
     <ng-container matColumnDef="excluir">
       <th mat-header-cell *matHeaderCellDef>Excluir</th>
       <td mat-cell *matCellDef="let row">
-        <button mat-raised-button color="warn" (click)="excluir(row.id)"><mat-icon>delete_outline</mat-icon></button>
+        <button mat-raised-button color="warn" (click)="excluir(row.id)">
+          <mat-icon>delete_outline</mat-icon>
+        </button>
       </td>
     </ng-container>
 

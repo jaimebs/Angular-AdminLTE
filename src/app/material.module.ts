@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { getPtBrPaginatorIntl } from './locale/pt-br-paginator-intl';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
+  MatPaginatorIntl,
   MatFormFieldModule,
   MatInputModule,
   MatButtonModule,
@@ -39,6 +40,7 @@ import {
     MatPaginatorModule,
     MatSortModule,
     MatTooltipModule
-  ]
+  ],
+  providers: [{ provide: MatPaginatorIntl, useValue: getPtBrPaginatorIntl() }]
 })
 export class MaterialModule {}

@@ -5,7 +5,10 @@
   </h1>
   <ol class="breadcrumb">
     <li>
-      <a [routerLink]="['/dashboard']"><i class="fa fa-dashboard"></i> Home</a>
+      <a [routerLink]="['/dashboard']">
+        <i class="fa fa-dashboard"></i>
+        Home
+      </a>
     </li>
     <li class="active">Lista</li>
   </ol>
@@ -19,7 +22,7 @@
     matTooltip="Click para criar um novo usuário"
     matTooltipPosition="left"
     matTooltipShowDelay="1000"
-    [routerLink]="['/seguranca/usuario/form']"
+    [routerLink]="['/seguranca/usuario/novo']"
   >
     Novo
   </button>

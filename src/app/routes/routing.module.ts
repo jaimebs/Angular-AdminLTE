@@ -17,7 +17,8 @@ const routes: Routes = [
       { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'seguranca/usuario', component: UsuarioComponent, canActivate: [AuthGuard] },
-      { path: 'seguranca/usuario/form', component: UsuarioFormComponent, canActivate: [AuthGuard] }
+      { path: 'seguranca/usuario/novo', component: UsuarioFormComponent, canActivate: [AuthGuard] },
+      { path: 'seguranca/usuario/editar/:id', component: UsuarioFormComponent, canActivate: [AuthGuard] }
     ]
   },
   { path: 'login', component: LoginComponent },

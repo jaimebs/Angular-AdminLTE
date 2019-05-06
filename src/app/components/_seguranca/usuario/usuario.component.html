@@ -1,18 +1,4 @@
-<section>
-  <h1>
-    Usuário
-    <small>Listagem</small>
-  </h1>
-  <ol class="breadcrumb">
-    <li>
-      <a [routerLink]="['/dashboard']">
-        <i class="fa fa-dashboard"></i>
-        Home
-      </a>
-    </li>
-    <li class="active">Lista</li>
-  </ol>
-</section>
+<app-breadcrumb [principal]="'Usuário'" [pequeno]="'Listagem'" [form]="'Lista'"></app-breadcrumb>
 
 <div class="text-right">
   <button

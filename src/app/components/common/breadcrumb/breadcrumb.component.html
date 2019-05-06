@@ -1,0 +1,15 @@
+<section>
+  <h1>
+    {{ principal }}
+    <small>{{ pequeno }}</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <a [routerLink]="['/dashboard']">
+        <i class="fa fa-dashboard"></i>
+        Home
+      </a>
+    </li>
+    <li class="active">{{ form }}</li>
+  </ol>
+</section>

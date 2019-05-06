@@ -17,6 +17,7 @@ import { Interceptor } from './auth/interceptor.module';
 import { UsuarioComponent } from './components/_seguranca/usuario/usuario.component';
 import { NotFoundComponent } from './components/common/not-found/not-found.component';
 import { UsuarioFormComponent } from './components/_seguranca/usuario/usuario-form.component';
+import { BreadcrumbComponent } from './components/common/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UsuarioFormComponent } from './components/_seguranca/usuario/usuario-fo
     HomeComponent,
     UsuarioComponent,
     NotFoundComponent,
-    UsuarioFormComponent
+    UsuarioFormComponent,
+    BreadcrumbComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, RoutingModule, Interceptor, MaterialModule],
   providers: [],

@@ -1,4 +1,4 @@
-<app-breadcrumb [principal]="'Usuário'" [pequeno]="'Formulário'" [form]="'Novo'"></app-breadcrumb>
+<app-breadcrumb [principal]="'Usuário'" [pequeno]="'Formulário'" [form]="id ? 'Editar' : 'Novo'"></app-breadcrumb>
 
 <form #formLogin="ngForm">
   <div class="row">

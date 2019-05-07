@@ -4,6 +4,7 @@ import { UsuarioService } from './../../../services/usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { TipoDeMensagem } from 'src/app/emuns.enum';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-form',
@@ -14,15 +15,19 @@ export class UsuarioFormComponent implements OnInit {
   constructor(
     private _location: Location,
     private usuarioService: UsuarioService,
-    private mensagemService: MensagemService
-  ) {}
+    private mensagemService: MensagemService,
+    private route: ActivatedRoute
+  ) {
+    this.id = +this.route.snapshot.paramMap.get('id');
+  }
 
   usuario = new Usuario();
+  id: number;
 
   salvar(usuario: Usuario) {
     this.usuarioService.salvar(usuario).subscribe(
       () => {
-        this.mensagemService.avisoToast('Usuário cadastrado com sucesso!', TipoDeMensagem.Sucesso);
+        this.mensagemService.avisoToast('Processo efetuado com sucesso!', TipoDeMensagem.Sucesso);
         this.voltar();
       },
       error => {
@@ -32,9 +37,17 @@ export class UsuarioFormComponent implements OnInit {
     );
   }
 
+  retornarUsuario(id: number) {
+    this.usuarioService.listarPorId(id).subscribe(usuario => {
+      this.usuario = { ...usuario, password: null };
+    });
+  }
+
   voltar() {
     this._location.back();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (this.id) this.retornarUsuario(this.id);
+  }
 }

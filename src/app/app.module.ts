@@ -18,6 +18,8 @@ import { UsuarioComponent } from './components/_seguranca/usuario/usuario.compon
 import { NotFoundComponent } from './components/common/not-found/not-found.component';
 import { UsuarioFormComponent } from './components/_seguranca/usuario/usuario-form.component';
 import { BreadcrumbComponent } from './components/common/breadcrumb/breadcrumb.component';
+import { BancoComponent } from './components/_financeiro/banco/banco.component';
+import { BancoFormComponent } from './components/_financeiro/banco/banco-form.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { BreadcrumbComponent } from './components/common/breadcrumb/breadcrumb.c
     UsuarioComponent,
     NotFoundComponent,
     UsuarioFormComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    BancoComponent,
+    BancoFormComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, RoutingModule, Interceptor, MaterialModule],
   providers: [],

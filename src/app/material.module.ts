@@ -12,7 +12,10 @@ import {
   MatTableModule,
   MatPaginatorModule,
   MatSortModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatCheckboxModule,
+  MatSelectModule,
+  MatAutocompleteModule
 } from '@angular/material';
 
 @NgModule({
@@ -28,7 +31,10 @@ import {
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatAutocompleteModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -39,7 +45,10 @@ import {
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatAutocompleteModule
   ],
   providers: [{ provide: MatPaginatorIntl, useValue: getPtBrPaginatorIntl() }]
 })

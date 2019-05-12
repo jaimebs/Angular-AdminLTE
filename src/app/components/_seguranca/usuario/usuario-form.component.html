@@ -22,11 +22,11 @@
     </div>
   </div>
   <div class="margin-button-row">
-    <button mat-raised-button color="primary" (click)="salvar(usuario)" [disabled]="!formLogin.form.valid">
-      Salvar
-    </button>
     <button mat-raised-button color="accent" (click)="voltar()">
       Cancelar
+    </button>
+    <button mat-raised-button color="primary" (click)="salvar(usuario)" [disabled]="!formLogin.form.valid">
+      Salvar
     </button>
   </div>
 </form>

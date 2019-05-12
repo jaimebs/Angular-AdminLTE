@@ -20,6 +20,9 @@ import { UsuarioFormComponent } from './components/_seguranca/usuario/usuario-fo
 import { BreadcrumbComponent } from './components/common/breadcrumb/breadcrumb.component';
 import { BancoComponent } from './components/_financeiro/banco/banco.component';
 import { BancoFormComponent } from './components/_financeiro/banco/banco-form.component';
+import { ContaComponent } from './components/_financeiro/conta/conta.component';
+import { ContaFormComponent } from './components/_financeiro/conta/conta-form.component';
+import { OrderbyPipe } from './pipes/orderby.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { BancoFormComponent } from './components/_financeiro/banco/banco-form.co
     UsuarioFormComponent,
     BreadcrumbComponent,
     BancoComponent,
-    BancoFormComponent
+    BancoFormComponent,
+    ContaComponent,
+    ContaFormComponent,
+    OrderbyPipe
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, RoutingModule, Interceptor, MaterialModule],
   providers: [],

@@ -10,6 +10,8 @@ import { NotFoundComponent } from '../components/common/not-found/not-found.comp
 import { UsuarioFormComponent } from '../components/_seguranca/usuario/usuario-form.component';
 import { BancoComponent } from '../components/_financeiro/banco/banco.component';
 import { BancoFormComponent } from '../components/_financeiro/banco/banco-form.component';
+import { ContaComponent } from '../components/_financeiro/conta/conta.component';
+import { ContaFormComponent } from '../components/_financeiro/conta/conta-form.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,9 @@ const routes: Routes = [
       { path: 'financeiro/banco', component: BancoComponent, canActivate: [AuthGuard] },
       { path: 'financeiro/banco/novo', component: BancoFormComponent, canActivate: [AuthGuard] },
       { path: 'financeiro/banco/editar/:id', component: BancoFormComponent, canActivate: [AuthGuard] },
+      { path: 'financeiro/conta', component: ContaComponent, canActivate: [AuthGuard] },
+      { path: 'financeiro/conta/novo', component: ContaFormComponent, canActivate: [AuthGuard] },
+      { path: 'financeiro/conta/editar/:id', component: ContaFormComponent, canActivate: [AuthGuard] },
       { path: 'seguranca/usuario', component: UsuarioComponent, canActivate: [AuthGuard] },
       { path: 'seguranca/usuario/novo', component: UsuarioFormComponent, canActivate: [AuthGuard] },
       { path: 'seguranca/usuario/editar/:id', component: UsuarioFormComponent, canActivate: [AuthGuard] }

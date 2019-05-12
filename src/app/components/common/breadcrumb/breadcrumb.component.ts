@@ -18,7 +18,7 @@ export class BreadcrumbComponent implements OnInit {
   private propriedades() {
     const [, , titulo, form] = this.router.url.split('/');
     this.titulo = this.principal || _.capitalize(titulo);
-    this.pequeno = form ? 'Formuário' : 'Listagem';
+    this.pequeno = form ? 'Formulário' : 'Listagem';
     this.form = form ? _.capitalize(form) : 'Lista';
   }
 
